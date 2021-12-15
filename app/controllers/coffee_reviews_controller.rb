@@ -25,7 +25,9 @@ class CoffeeReviewsController < ApplicationController
     @coffee_review.user_id = current_user.id
     respond_to do |format|
       if @coffee_review.save
-        format.html { redirect_to @coffee_review, notice: "Coffee review was successfully created." }
+        #format.html { redirect_to @coffee_review, notice: "Coffee review was successfully created." }
+        url = "/coffees/" + @coffee_review.coffee_id.to_s
+        format.html { redirect_to url, notice: 'Coffee review was successfully created.' }
         format.json { render :show, status: :created, location: @coffee_review }
       else
         format.html { render :new, status: :unprocessable_entity }
