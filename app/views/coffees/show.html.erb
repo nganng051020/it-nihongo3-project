@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @coffee.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @coffee.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @coffee.price %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @coffee.restaurant %>
+</p>
+
+<p>
+   <% if @coffee.image.attached? %>
+     <%= image_tag @coffee.image %>
+   <% end %>
+ </p>
+
+<%= link_to 'Edit', edit_coffee_path(@coffee) %> |
+<%= link_to 'Back', coffees_path %>
