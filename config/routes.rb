@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :coffees
   devise_for :users
   get 'users/show'
