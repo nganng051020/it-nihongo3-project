@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @coffee_review.user_id %>
+</p>
+
+<p>
+  <strong>Coffee:</strong>
+  <%= @coffee_review.coffee_id %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @coffee_review.review %>
+</p>
+
+<%= link_to 'Edit', edit_coffee_review_path(@coffee_review) %> |
+<%= link_to 'Back', coffee_reviews_path %>

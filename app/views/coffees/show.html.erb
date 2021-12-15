@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Title:</strong>
   <%= @coffee.title %>
@@ -25,6 +26,23 @@
      <%= image_tag @coffee.image %>
    <% end %>
  </p>
+ <h2>Review From</h2>
+<%= form_with(model: @coffee_review, local: true) do |form| %>
+  <div class= "field">
+    <%= form.text_area :review %>
+    <%= form.hidden_field :coffee_id, :value => @coffee.id %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<h2>Review Coffee List</h2>
+<ul>
+  <% @coffee.coffee_review.each do |coffee_review| %>
+   <li><%= coffee_review.review %>     
+    (<i><%= coffee_review.user_id %></i>)</li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_coffee_path(@coffee) %> |
 <%= link_to 'Back', coffees_path %>
