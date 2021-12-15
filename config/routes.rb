@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :coffee_reviews
   resources :coffees
   devise_for :users
   get 'users/show'
