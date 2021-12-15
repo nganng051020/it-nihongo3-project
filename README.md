@@ -1,1 +1,1 @@
-# rails_practice
+# rails_project
