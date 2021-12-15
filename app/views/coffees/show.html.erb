@@ -35,11 +35,11 @@
     <%= form.submit %>
   </div>
 <% end %>
-<h2>Review Coffe List</h2>
+<h2>Review Coffee List</h2>
 <ul>
   <% @coffee.coffee_review.each do |coffee_review| %>
-   <li><%= coffee_review.review %>
-     (<i><%= coffee_review.user_id %></i>)</li>
+   <li><%= coffee_review.review %>     
+    (<i><%= coffee_review.user_id %></i>)</li>
   <% end %>
 </ul>
 
