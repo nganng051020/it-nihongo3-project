@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Coffee Reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Coffee</th>
+      <th>Review</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coffee_reviews.each do |coffee_review| %>
+      <tr>
+        <td><%= coffee_review.user_id %></td>
+        <td><%= coffee_review.coffee_id %></td>
+        <td><%= coffee_review.review %></td>
+        <td><%= link_to 'Show', coffee_review %></td>
+        <td><%= link_to 'Edit', edit_coffee_review_path(coffee_review) %></td>
+        <td><%= link_to 'Destroy', coffee_review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coffee Review', new_coffee_review_path %>

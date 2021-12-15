@@ -25,6 +25,16 @@
      <%= image_tag @coffee.image %>
    <% end %>
  </p>
+ <h2>Review From</h2>
+<%= form_with(model: @coffee_review, local: true) do |form| %>
+  <div class= "field">
+    <%= form.text_area :review %>
+    <%= form.hidden_field :coffee_id, :value => @coffee.id %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_coffee_path(@coffee) %> |
 <%= link_to 'Back', coffees_path %>
