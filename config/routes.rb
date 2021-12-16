@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :coffee_reviews
   root 'home#index'
+  resources :searchs
   resources :coffees
   devise_for :users
   get 'users/show'
