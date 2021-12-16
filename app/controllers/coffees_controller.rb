@@ -3,7 +3,7 @@ class CoffeesController < ApplicationController
 
   # GET /coffees or /coffees.json
   def index
-    @coffees = Coffee.all
+    @coffees = Coffee.where(["title LIKE ?", "%#{params[:search]}%"])
   end
 
   # GET /coffees/1 or /coffees/1.json
