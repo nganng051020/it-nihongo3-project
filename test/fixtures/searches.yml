@@ -3,9 +3,9 @@
 one:
   keywords: MyString
   min_price: 9.99
-  maxprice: 9.99
+  max_price: 9.99
 
 two:
   keywords: MyString
   min_price: 9.99
-  maxprice: 9.99
+  max_price: 9.99
