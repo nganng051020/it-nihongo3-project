@@ -21,7 +21,7 @@
       <div class="container">
         <% if user_signed_in? %>
         <br></br>
-        <p>こんにちは、<%= link_to current_user.email, users_show_path %></p>
+        <p>こんにちは、<%= link_to current_user.name, users_show_path %></p>
       <% else %>
           <br></br>
           <p>まだ、ログインしません</p>
