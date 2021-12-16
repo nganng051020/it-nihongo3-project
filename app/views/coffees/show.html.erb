@@ -40,7 +40,7 @@
 <ul>
   <% @coffee.coffee_review.each do |coffee_review| %>
    <li><%= coffee_review.review %>     
-    (<i><%= coffee_review.user_id %></i>)</li>
+    (<i><%= coffee_review.user.name if coffee_review.user %> </i>)</li>
   <% end %>
 </ul>
 
