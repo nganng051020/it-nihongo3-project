@@ -17,6 +17,9 @@
         <li class="nav-item">
             <%= link_to "ログアウト", destroy_user_session_path, class:"nav-link", method: :delete %>
         </li>
+         <li class="nav-item">
+            <%= link_to "プロファイル", users_show_path, class:"nav-link" %>
+        </li>
         <li class="nav-item">
             <%= link_to "Edit", edit_user_registration_path, class:"nav-link"%>
         </li>

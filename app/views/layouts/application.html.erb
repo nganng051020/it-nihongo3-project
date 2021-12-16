@@ -21,14 +21,14 @@
       <div class="container">
         <% if user_signed_in? %>
         <br></br>
-        <p>こんにちわ, <%= current_user.email %></p>
+        <p>こんにちは、<%= link_to current_user.email, users_show_path %></p>
       <% else %>
           <br></br>
           <p>まだ、ログインしません</p>
       <% end %>
       <hr>
       <%= yield %>
-    </div>
+          </div>
      
     <!-- Optional JavaScript; choose one of the two! -->
 
