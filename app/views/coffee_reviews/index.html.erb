@@ -2,7 +2,7 @@
 
 <h1>Coffee Reviews</h1>
 
-<table>
+<table class="table table-dark">
   <thead>
     <tr>
       <th>User</th>
@@ -12,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table table-light">
     <% @coffee_reviews.each do |coffee_review| %>
       <tr>
         <td><%= coffee_review.user_id %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Coffee Review', new_coffee_review_path %>
+<%= link_to 'New Coffee Review', new_coffee_review_path, class:"btn btn-dark" %>
